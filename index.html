@@ -3,74 +3,620 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Prodaja prasića</title>
+
+  <title>Trša Pečenjara | Praseće i jagnjeće pečenje Beograd</title>
 
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f6f2e8;
-      text-align: center;
-      padding: 40px;
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
 
-    .kartica {
-      max-width: 600px;
-      margin: auto;
-      background: white;
-      padding: 30px;
-      border-radius: 15px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5eee5;
+      color: #2b2118;
+    }
+
+    /* GLAVNA SLIKA */
+
+    .hero {
+      min-height: 100vh;
+
+      background:
+        linear-gradient(
+          rgba(25, 14, 7, 0.58),
+          rgba(25, 14, 7, 0.78)
+        ),
+        url("https://images.pexels.com/photos/8995922/pexels-photo-8995922.jpeg");
+
+      background-size: cover;
+      background-position: center;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      padding: 40px 20px;
+    }
+
+    .hero-content {
+      max-width: 900px;
+      text-align: center;
+      color: white;
+    }
+
+    .lokacija {
+      color: #ffd38f;
+      font-size: 18px;
+      font-weight: bold;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 15px;
     }
 
     h1 {
-      font-size: 36px;
+      font-size: 64px;
+      margin-bottom: 15px;
+      text-shadow: 0 3px 10px rgba(0,0,0,0.5);
     }
 
-    p {
-      font-size: 20px;
-    }
-
-    .telefon {
-      font-size: 28px;
+    .podnaslov {
+      font-size: 27px;
       font-weight: bold;
-      margin: 25px 0;
+      color: #ffe0ad;
+      margin-bottom: 20px;
+    }
+
+    .hero-text {
+      max-width: 750px;
+      margin: auto;
+      font-size: 21px;
+      line-height: 1.6;
+    }
+
+    .cena {
+      display: inline-block;
+
+      margin: 30px 0;
+
+      background: #c6752c;
+      color: white;
+
+      padding: 14px 30px;
+
+      border-radius: 50px;
+
+      font-size: 25px;
+      font-weight: bold;
+
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    }
+
+    /* DUGMAD */
+
+    .dugmad {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
     }
 
     .dugme {
       display: inline-block;
-      padding: 15px 30px;
-      font-size: 22px;
-      background: #2f8f46;
-      color: white;
+
+      padding: 16px 27px;
+
+      border-radius: 12px;
+
       text-decoration: none;
-      border-radius: 10px;
+
+      color: white;
+
+      font-size: 18px;
+      font-weight: bold;
+
+      transition: 0.2s;
     }
+
+    .dugme:hover {
+      transform: translateY(-3px);
+    }
+
+    .poziv {
+      background: #b96320;
+    }
+
+    .whatsapp {
+      background: #25D366;
+    }
+
+    .viber {
+      background: #7360f2;
+    }
+
+
+    /* PONUDA */
+
+    .ponuda {
+      max-width: 1100px;
+      margin: auto;
+      padding: 80px 20px;
+    }
+
+    .naslov {
+      text-align: center;
+      margin-bottom: 45px;
+    }
+
+    .naslov h2 {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+
+    .naslov p {
+      color: #746558;
+      font-size: 18px;
+    }
+
+    .kartice {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .kartica {
+      background: white;
+
+      border-radius: 20px;
+
+      padding: 35px 25px;
+
+      text-align: center;
+
+      box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    }
+
+    .ikonica {
+      font-size: 50px;
+      margin-bottom: 15px;
+    }
+
+    .kartica h3 {
+      font-size: 24px;
+      margin-bottom: 12px;
+    }
+
+    .kartica p {
+      color: #66594e;
+      font-size: 17px;
+      line-height: 1.6;
+    }
+
+
+    /* CENA SEKCIJA */
+
+    .cena-sekcija {
+      background: #3a271a;
+      color: white;
+
+      text-align: center;
+
+      padding: 70px 20px;
+    }
+
+    .cena-sekcija h2 {
+      font-size: 36px;
+    }
+
+    .velika-cena {
+      color: #ffc36b;
+
+      font-size: 55px;
+      font-weight: bold;
+
+      margin: 20px 0;
+    }
+
+    .cena-sekcija p {
+      color: #e8ded6;
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+
+    /* DOSTAVA */
+
+    .dostava {
+      text-align: center;
+
+      padding: 70px 20px;
+
+      background: white;
+    }
+
+    .dostava h2 {
+      font-size: 36px;
+      margin-bottom: 15px;
+    }
+
+    .dostava p {
+      max-width: 650px;
+      margin: auto;
+
+      color: #66594e;
+
+      font-size: 19px;
+      line-height: 1.6;
+    }
+
+
+    /* KONTAKT */
+
+    .kontakt {
+      background: #20150f;
+
+      color: white;
+
+      text-align: center;
+
+      padding: 75px 20px;
+    }
+
+    .kontakt h2 {
+      font-size: 40px;
+      margin-bottom: 15px;
+    }
+
+    .kontakt p {
+      font-size: 19px;
+      color: #ded2c9;
+    }
+
+    .telefon {
+      font-size: 38px;
+      font-weight: bold;
+
+      margin: 25px 0;
+
+      color: #ffc36b;
+    }
+
+    .radno-vreme {
+      margin-top: 30px;
+
+      color: #ded2c9;
+
+      font-size: 18px;
+    }
+
+
+    /* FOOTER */
+
+    footer {
+      background: #120d09;
+
+      color: #9e948c;
+
+      text-align: center;
+
+      padding: 20px;
+    }
+
+
+    /* TELEFON */
+
+    @media (max-width: 750px) {
+
+      h1 {
+        font-size: 42px;
+      }
+
+      .podnaslov {
+        font-size: 21px;
+      }
+
+      .hero-text {
+        font-size: 18px;
+      }
+
+      .kartice {
+        grid-template-columns: 1fr;
+      }
+
+      .naslov h2 {
+        font-size: 32px;
+      }
+
+      .velika-cena {
+        font-size: 42px;
+      }
+
+      .telefon {
+        font-size: 29px;
+      }
+
+      .dugme {
+        width: 100%;
+        max-width: 330px;
+      }
+    }
+
   </style>
 </head>
 
+
 <body>
 
-  <div class="kartica">
 
-    <h1>Prodaja prasića</h1>
+  <!-- GLAVNA STRANICA -->
 
-    <p>
-      Primamo narudžbine za prasiće.
-    </p>
+  <section class="hero">
 
-    <p>
-      Za cenu, dostupnost i dodatne informacije pozovite:
-    </p>
+    <div class="hero-content">
 
-    <div class="telefon">
-      063 / 666-038
+      <div class="lokacija">
+        BEOGRAD • DOSTAVA NA ADRESU
+      </div>
+
+      <h1>
+        Trša Pečenjara
+      </h1>
+
+      <div class="podnaslov">
+        Praseće i jagnjeće pečenje po porudžbini
+      </div>
+
+      <p class="hero-text">
+
+        Sveže pečeno, pravo na vašu trpezu.
+
+        Praseće i jagnjeće pečenje pripremamo
+        po porudžbini za slave, proslave,
+        okupljanja i porodične ručkove.
+
+        Vi naručite — mi donosimo na vašu adresu.
+
+      </p>
+
+
+      <div class="cena">
+        🔥 2.500 din/kg
+      </div>
+
+
+      <div class="dugmad">
+
+        <a
+          class="dugme poziv"
+          href="tel:+38163666038">
+
+          📞 Pozovi odmah
+
+        </a>
+
+
+        <a
+          class="dugme whatsapp"
+          href="https://wa.me/38163666038">
+
+          💬 WhatsApp
+
+        </a>
+
+
+        <a
+          class="dugme viber"
+          href="viber://chat?number=%2B38163666038">
+
+          💜 Viber
+
+        </a>
+
+      </div>
+
     </div>
 
-    <a class="dugme" href="tel:+38163666038">
-      📞 Pozovi odmah
-    </a>
+  </section>
 
-  </div>
+
+
+  <!-- PONUDA -->
+
+  <section class="ponuda">
+
+    <div class="naslov">
+
+      <h2>Naša ponuda</h2>
+
+      <p>
+        Pečenje pripremljeno po vašoj porudžbini
+      </p>
+
+    </div>
+
+
+    <div class="kartice">
+
+
+      <div class="kartica">
+
+        <div class="ikonica">
+          🐷
+        </div>
+
+        <h3>
+          Praseće pečenje
+        </h3>
+
+        <p>
+          Sveže pečeno prase,
+          pripremljeno po porudžbini
+          i spremno za vašu trpezu.
+        </p>
+
+      </div>
+
+
+
+      <div class="kartica">
+
+        <div class="ikonica">
+          🐑
+        </div>
+
+        <h3>
+          Jagnjeće pečenje
+        </h3>
+
+        <p>
+          Jagnjeće pečenje za slave,
+          proslave, porodične ručkove
+          i posebne prilike.
+        </p>
+
+      </div>
+
+
+
+      <div class="kartica">
+
+        <div class="ikonica">
+          🚚
+        </div>
+
+        <h3>
+          Dostava
+        </h3>
+
+        <p>
+          Naručite telefonom ili porukom,
+          a pečenje donosimo na
+          dogovorenu adresu.
+        </p>
+
+      </div>
+
+
+    </div>
+
+  </section>
+
+
+
+  <!-- CENA -->
+
+  <section class="cena-sekcija">
+
+    <h2>
+      Cena pečenja
+    </h2>
+
+    <div class="velika-cena">
+      2.500 din/kg
+    </div>
+
+    <p>
+      Za dostupnost, količinu i termin
+      isporuke pozovite nas ili
+      pošaljite poruku.
+    </p>
+
+  </section>
+
+
+
+  <!-- DOSTAVA -->
+
+  <section class="dostava">
+
+    <h2>
+      🚚 Dostava na adresu
+    </h2>
+
+    <p>
+      Ne morate da dolazite po pečenje.
+      Dogovorite porudžbinu sa nama,
+      a mi ćemo pripremljeno pečenje
+      doneti na dogovorenu adresu u Beogradu.
+    </p>
+
+  </section>
+
+
+
+  <!-- KONTAKT -->
+
+  <section class="kontakt">
+
+    <h2>
+      Poručite pečenje
+    </h2>
+
+    <p>
+      Pozovite nas ili pošaljite poruku
+      putem WhatsApp-a ili Vibera.
+    </p>
+
+
+    <div class="telefon">
+      063 666 038
+    </div>
+
+
+    <div class="dugmad">
+
+      <a
+        class="dugme poziv"
+        href="tel:+38163666038">
+
+        📞 Pozovi
+
+      </a>
+
+
+      <a
+        class="dugme whatsapp"
+        href="https://wa.me/38163666038">
+
+        💬 WhatsApp
+
+      </a>
+
+
+      <a
+        class="dugme viber"
+        href="viber://chat?number=%2B38163666038">
+
+        💜 Viber
+
+      </a>
+
+    </div>
+
+
+    <div class="radno-vreme">
+
+      🕐 Narudžbine svakog dana
+      <strong>08:00 – 20:00</strong>
+
+    </div>
+
+  </section>
+
+
+
+  <footer>
+
+    © 2026 Trša Pečenjara • Beograd
+
+  </footer>
+
 
 </body>
 </html>
