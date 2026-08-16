@@ -23,8 +23,11 @@
       color: #241a13;
     }
 
+    /* GLAVNI DEO */
+
     .hero {
       min-height: 100vh;
+
       background:
         linear-gradient(
           rgba(17, 11, 7, 0.58),
@@ -44,7 +47,7 @@
 
     .hero-content {
       width: 100%;
-      max-width: 900px;
+      max-width: 950px;
       text-align: center;
       color: #fff;
     }
@@ -88,18 +91,27 @@
       color: #f5eee5;
     }
 
-    .cena {
-      display: inline-block;
+    /* CENE NA VRHU */
+
+    .cene-hero {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
       margin: 32px 0;
-      padding: 14px 30px;
+    }
+
+    .cena {
+      padding: 14px 24px;
       border: 1px solid #d9ad66;
       border-radius: 5px;
-      background: rgba(20, 13, 9, 0.65);
+      background: rgba(20, 13, 9, 0.72);
       color: #f0cf99;
-      font-size: 24px;
+      font-size: 19px;
       font-weight: bold;
-      letter-spacing: 1px;
     }
+
+    /* DUGMAD */
 
     .dugmad {
       display: flex;
@@ -136,6 +148,8 @@
       color: #1b120c;
       transform: translateY(-2px);
     }
+
+    /* PONUDA */
 
     .ponuda {
       max-width: 1100px;
@@ -203,38 +217,75 @@
       font-size: 16px;
     }
 
-    .cena-sekcija {
+    .cena-kartica {
+      margin-top: 18px;
+      font-size: 21px;
+      font-weight: bold;
+      color: #a47436;
+    }
+
+    /* CENOVNIK */
+
+    .cenovnik {
       background: #281b13;
       color: white;
       text-align: center;
       padding: 80px 20px;
     }
 
-    .cena-sekcija .mali {
+    .cenovnik .mali {
       color: #d9ad66;
       letter-spacing: 3px;
       font-size: 14px;
       margin-bottom: 10px;
     }
 
-    .cena-sekcija h2 {
+    .cenovnik h2 {
       font-family: Georgia, "Times New Roman", serif;
       font-size: 39px;
       font-weight: normal;
+      margin-bottom: 40px;
+    }
+
+    .cene {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      flex-wrap: wrap;
+      max-width: 850px;
+      margin: auto;
+    }
+
+    .cena-box {
+      width: 360px;
+      padding: 30px 20px;
+      border: 1px solid #8e693d;
+      background: #21160f;
+      border-radius: 8px;
+    }
+
+    .cena-box h3 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 24px;
+      font-weight: normal;
+      color: #f5eee5;
+      margin-bottom: 12px;
     }
 
     .velika-cena {
       color: #e2b66f;
       font-family: Georgia, "Times New Roman", serif;
-      font-size: 58px;
-      margin: 25px 0;
+      font-size: 37px;
     }
 
-    .cena-sekcija p {
+    .cenovnik-info {
+      margin-top: 35px;
       color: #d7cbc1;
       font-size: 17px;
       line-height: 1.7;
     }
+
+    /* DOSTAVA */
 
     .dostava {
       background: #fff;
@@ -256,6 +307,8 @@
       line-height: 1.7;
       color: #6b5d53;
     }
+
+    /* KONTAKT */
 
     .kontakt {
       background: #17100c;
@@ -304,6 +357,8 @@
       font-size: 14px;
     }
 
+    /* MOBILNI */
+
     @media (max-width: 750px) {
 
       .hero {
@@ -327,8 +382,14 @@
         font-size: 17px;
       }
 
+      .cene-hero {
+        flex-direction: column;
+        align-items: center;
+      }
+
       .cena {
-        font-size: 21px;
+        width: 100%;
+        max-width: 320px;
       }
 
       .dugme {
@@ -344,8 +405,12 @@
         font-size: 34px;
       }
 
+      .cenovnik h2 {
+        font-size: 32px;
+      }
+
       .velika-cena {
-        font-size: 44px;
+        font-size: 32px;
       }
 
       .kontakt h2 {
@@ -361,6 +426,8 @@
 
 <body>
 
+  <!-- GLAVNI DEO -->
+
   <section class="hero">
 
     <div class="hero-content">
@@ -369,9 +436,7 @@
         BEOGRAD &nbsp; • &nbsp; DOSTAVA NA ADRESU
       </div>
 
-      <h1>
-        Trša Pečenjara
-      </h1>
+      <h1>Trša Pečenjara</h1>
 
       <div class="linija"></div>
 
@@ -386,8 +451,16 @@
         Vi naručite — mi donosimo na vašu adresu.
       </p>
 
-      <div class="cena">
-        2.500 din/kg
+      <div class="cene-hero">
+
+        <div class="cena">
+          Praseće &nbsp; 2.500 din/kg
+        </div>
+
+        <div class="cena">
+          Jagnjeće &nbsp; 3.500 din/kg
+        </div>
+
       </div>
 
       <div class="dugmad">
@@ -417,6 +490,8 @@
   </section>
 
 
+  <!-- PONUDA -->
+
   <section class="ponuda">
 
     <div class="naslov">
@@ -425,9 +500,7 @@
         TRŠA PEČENJARA
       </div>
 
-      <h2>
-        Naša ponuda
-      </h2>
+      <h2>Naša ponuda</h2>
 
       <p>
         Pečenje pripremljeno po vašoj porudžbini
@@ -435,22 +508,23 @@
 
     </div>
 
-
     <div class="kartice">
 
       <div class="kartica">
 
         <div class="kartica-linija"></div>
 
-        <h3>
-          Praseće pečenje
-        </h3>
+        <h3>Praseće pečenje</h3>
 
         <p>
           Sveže pečeno prase pripremljeno
           po porudžbini i spremno za vašu trpezu.
         </p>
 
+        <div class="cena-kartica">
+          2.500 din/kg
+        </div>
+
       </div>
 
 
@@ -458,15 +532,17 @@
 
         <div class="kartica-linija"></div>
 
-        <h3>
-          Jagnjeće pečenje
-        </h3>
+        <h3>Jagnjeće pečenje</h3>
 
         <p>
           Jagnjeće pečenje za slave, proslave,
           porodične ručkove i posebne prilike.
         </p>
 
+        <div class="cena-kartica">
+          3.500 din/kg
+        </div>
+
       </div>
 
 
@@ -474,9 +550,7 @@
 
         <div class="kartica-linija"></div>
 
-        <h3>
-          Dostava na adresu
-        </h3>
+        <h3>Dostava na adresu</h3>
 
         <p>
           Poručite telefonom ili porukom,
@@ -491,42 +565,67 @@
   </section>
 
 
-  <section class="cena-sekcija">
+  <!-- CENOVNIK -->
+
+  <section class="cenovnik">
 
     <div class="mali">
-      CENA PEČENJA
+      CENOVNIK
     </div>
 
     <h2>
-      Kvalitetno pečenje za vašu trpezu
+      Izaberite pečenje za vašu trpezu
     </h2>
 
-    <div class="velika-cena">
-      2.500 din/kg
+    <div class="cene">
+
+      <div class="cena-box">
+
+        <h3>Praseće pečenje</h3>
+
+        <div class="velika-cena">
+          2.500 din/kg
+        </div>
+
+      </div>
+
+
+      <div class="cena-box">
+
+        <h3>Jagnjeće pečenje</h3>
+
+        <div class="velika-cena">
+          3.500 din/kg
+        </div>
+
+      </div>
+
     </div>
 
-    <p>
+    <div class="cenovnik-info">
       Za dostupnost, željenu količinu i termin isporuke
       pozovite nas ili pošaljite poruku.
-    </p>
+    </div>
 
   </section>
 
 
+  <!-- DOSTAVA -->
+
   <section class="dostava">
 
-    <h2>
-      Dostava na vašu adresu
-    </h2>
+    <h2>Dostava na vašu adresu</h2>
 
     <p>
-      Vi birate količinu i dogovarate termin,
-      a mi pripremamo pečenje i donosimo ga
+      Vi birate pečenje, količinu i dogovarate termin,
+      a mi pripremamo vašu porudžbinu i donosimo je
       na dogovorenu adresu u Beogradu.
     </p>
 
   </section>
 
+
+  <!-- KONTAKT -->
 
   <section class="kontakt">
 
@@ -534,9 +633,7 @@
       NARUČIVANJE
     </div>
 
-    <h2>
-      Poručite svoje pečenje
-    </h2>
+    <h2>Poručite svoje pečenje</h2>
 
     <p>
       Pozovite nas ili pošaljite poruku
