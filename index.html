@@ -18,20 +18,17 @@
     }
 
     body {
-      font-family: Arial, sans-serif;
-      background: #f5eee5;
-      color: #2b2118;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f5f0e8;
+      color: #241a13;
     }
-
-    /* GLAVNA SLIKA */
 
     .hero {
       min-height: 100vh;
-
       background:
         linear-gradient(
-          rgba(25, 14, 7, 0.58),
-          rgba(25, 14, 7, 0.78)
+          rgba(17, 11, 7, 0.58),
+          rgba(17, 11, 7, 0.82)
         ),
         url("https://images.pexels.com/photos/8995922/pexels-photo-8995922.jpeg");
 
@@ -39,66 +36,70 @@
       background-position: center;
 
       display: flex;
-      align-items: center;
       justify-content: center;
+      align-items: center;
 
-      padding: 40px 20px;
+      padding: 50px 20px;
     }
 
     .hero-content {
+      width: 100%;
       max-width: 900px;
       text-align: center;
-      color: white;
+      color: #fff;
     }
 
     .lokacija {
-      color: #ffd38f;
-      font-size: 18px;
+      color: #d9ad66;
+      font-size: 16px;
       font-weight: bold;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      margin-bottom: 15px;
-    }
-
-    h1 {
-      font-size: 64px;
-      margin-bottom: 15px;
-      text-shadow: 0 3px 10px rgba(0,0,0,0.5);
-    }
-
-    .podnaslov {
-      font-size: 27px;
-      font-weight: bold;
-      color: #ffe0ad;
+      letter-spacing: 4px;
       margin-bottom: 20px;
     }
 
+    h1 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 68px;
+      font-weight: normal;
+      color: #fffaf2;
+      margin-bottom: 15px;
+      text-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    }
+
+    .linija {
+      width: 80px;
+      height: 2px;
+      background: #d9ad66;
+      margin: 20px auto;
+    }
+
+    .podnaslov {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 27px;
+      color: #ead8bb;
+      margin-bottom: 22px;
+    }
+
     .hero-text {
-      max-width: 750px;
+      max-width: 760px;
       margin: auto;
-      font-size: 21px;
-      line-height: 1.6;
+      font-size: 19px;
+      line-height: 1.7;
+      color: #f5eee5;
     }
 
     .cena {
       display: inline-block;
-
-      margin: 30px 0;
-
-      background: #c6752c;
-      color: white;
-
+      margin: 32px 0;
       padding: 14px 30px;
-
-      border-radius: 50px;
-
-      font-size: 25px;
+      border: 1px solid #d9ad66;
+      border-radius: 5px;
+      background: rgba(20, 13, 9, 0.65);
+      color: #f0cf99;
+      font-size: 24px;
       font-weight: bold;
-
-      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      letter-spacing: 1px;
     }
-
-    /* DUGMAD */
 
     .dugmad {
       display: flex;
@@ -109,212 +110,213 @@
 
     .dugme {
       display: inline-block;
-
-      padding: 16px 27px;
-
-      border-radius: 12px;
-
+      min-width: 180px;
+      padding: 16px 25px;
+      border-radius: 5px;
       text-decoration: none;
-
-      color: white;
-
-      font-size: 18px;
+      font-size: 17px;
       font-weight: bold;
-
-      transition: 0.2s;
-    }
-
-    .dugme:hover {
-      transform: translateY(-3px);
+      transition: all 0.25s ease;
     }
 
     .poziv {
-      background: #b96320;
+      background: #d9ad66;
+      color: #1b120c;
+      border: 1px solid #d9ad66;
     }
 
-    .whatsapp {
-      background: #25D366;
+    .poruka {
+      background: rgba(20, 13, 9, 0.70);
+      color: #f6e8d1;
+      border: 1px solid #d9ad66;
     }
 
-    .viber {
-      background: #7360f2;
+    .dugme:hover {
+      background: #f0cf99;
+      color: #1b120c;
+      transform: translateY(-2px);
     }
-
-
-    /* PONUDA */
 
     .ponuda {
       max-width: 1100px;
       margin: auto;
-      padding: 80px 20px;
+      padding: 90px 20px;
     }
 
     .naslov {
       text-align: center;
-      margin-bottom: 45px;
+      margin-bottom: 50px;
     }
 
-    .naslov h2 {
-      font-size: 40px;
+    .naslov-mali {
+      color: #a47436;
+      font-size: 14px;
+      font-weight: bold;
+      letter-spacing: 3px;
       margin-bottom: 10px;
     }
 
+    .naslov h2 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 42px;
+      font-weight: normal;
+      color: #291c13;
+    }
+
     .naslov p {
-      color: #746558;
-      font-size: 18px;
+      margin-top: 12px;
+      color: #75675c;
+      font-size: 17px;
     }
 
     .kartice {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 22px;
+      gap: 25px;
     }
 
     .kartica {
-      background: white;
-
-      border-radius: 20px;
-
-      padding: 35px 25px;
-
+      background: #fff;
+      padding: 42px 28px;
       text-align: center;
-
-      box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+      border-radius: 8px;
+      border-top: 3px solid #c99a55;
+      box-shadow: 0 10px 30px rgba(49, 33, 22, 0.08);
     }
 
-    .ikonica {
-      font-size: 50px;
-      margin-bottom: 15px;
+    .kartica-linija {
+      width: 45px;
+      height: 2px;
+      background: #c99a55;
+      margin: 0 auto 20px;
     }
 
     .kartica h3 {
-      font-size: 24px;
-      margin-bottom: 12px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 25px;
+      margin-bottom: 14px;
     }
 
     .kartica p {
-      color: #66594e;
-      font-size: 17px;
-      line-height: 1.6;
+      color: #6c6057;
+      line-height: 1.7;
+      font-size: 16px;
     }
 
-
-    /* CENA SEKCIJA */
-
     .cena-sekcija {
-      background: #3a271a;
+      background: #281b13;
       color: white;
-
       text-align: center;
+      padding: 80px 20px;
+    }
 
-      padding: 70px 20px;
+    .cena-sekcija .mali {
+      color: #d9ad66;
+      letter-spacing: 3px;
+      font-size: 14px;
+      margin-bottom: 10px;
     }
 
     .cena-sekcija h2 {
-      font-size: 36px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 39px;
+      font-weight: normal;
     }
 
     .velika-cena {
-      color: #ffc36b;
-
-      font-size: 55px;
-      font-weight: bold;
-
-      margin: 20px 0;
+      color: #e2b66f;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 58px;
+      margin: 25px 0;
     }
 
     .cena-sekcija p {
-      color: #e8ded6;
-      font-size: 18px;
-      line-height: 1.6;
+      color: #d7cbc1;
+      font-size: 17px;
+      line-height: 1.7;
     }
 
-
-    /* DOSTAVA */
-
     .dostava {
+      background: #fff;
+      padding: 80px 20px;
       text-align: center;
-
-      padding: 70px 20px;
-
-      background: white;
     }
 
     .dostava h2 {
-      font-size: 36px;
-      margin-bottom: 15px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 38px;
+      font-weight: normal;
+      margin-bottom: 20px;
     }
 
     .dostava p {
       max-width: 650px;
       margin: auto;
-
-      color: #66594e;
-
-      font-size: 19px;
-      line-height: 1.6;
+      font-size: 18px;
+      line-height: 1.7;
+      color: #6b5d53;
     }
 
-
-    /* KONTAKT */
-
     .kontakt {
-      background: #20150f;
-
-      color: white;
-
+      background: #17100c;
       text-align: center;
+      color: white;
+      padding: 85px 20px;
+    }
 
-      padding: 75px 20px;
+    .kontakt-mali {
+      color: #d9ad66;
+      letter-spacing: 3px;
+      font-size: 14px;
+      margin-bottom: 10px;
     }
 
     .kontakt h2 {
-      font-size: 40px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 42px;
+      font-weight: normal;
       margin-bottom: 15px;
     }
 
     .kontakt p {
-      font-size: 19px;
-      color: #ded2c9;
+      color: #d8ccc2;
+      font-size: 17px;
     }
 
     .telefon {
-      font-size: 38px;
-      font-weight: bold;
-
-      margin: 25px 0;
-
-      color: #ffc36b;
+      margin: 30px 0;
+      color: #e3b86f;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 42px;
     }
 
     .radno-vreme {
-      margin-top: 30px;
-
-      color: #ded2c9;
-
-      font-size: 18px;
+      margin-top: 35px;
+      color: #c9bdb4;
+      font-size: 16px;
     }
-
-
-    /* FOOTER */
 
     footer {
-      background: #120d09;
-
-      color: #9e948c;
-
+      background: #0e0907;
+      color: #81766f;
       text-align: center;
-
-      padding: 20px;
+      padding: 22px;
+      font-size: 14px;
     }
-
-
-    /* TELEFON */
 
     @media (max-width: 750px) {
 
+      .hero {
+        min-height: 95vh;
+      }
+
       h1 {
-        font-size: 42px;
+        font-size: 44px;
+      }
+
+      .lokacija {
+        font-size: 12px;
+        letter-spacing: 2px;
       }
 
       .podnaslov {
@@ -322,7 +324,16 @@
       }
 
       .hero-text {
-        font-size: 18px;
+        font-size: 17px;
+      }
+
+      .cena {
+        font-size: 21px;
+      }
+
+      .dugme {
+        width: 100%;
+        max-width: 320px;
       }
 
       .kartice {
@@ -330,92 +341,73 @@
       }
 
       .naslov h2 {
-        font-size: 32px;
+        font-size: 34px;
       }
 
       .velika-cena {
-        font-size: 42px;
+        font-size: 44px;
+      }
+
+      .kontakt h2 {
+        font-size: 34px;
       }
 
       .telefon {
-        font-size: 29px;
-      }
-
-      .dugme {
-        width: 100%;
-        max-width: 330px;
+        font-size: 31px;
       }
     }
-
   </style>
 </head>
 
-
 <body>
-
-
-  <!-- GLAVNA STRANICA -->
 
   <section class="hero">
 
     <div class="hero-content">
 
       <div class="lokacija">
-        BEOGRAD • DOSTAVA NA ADRESU
+        BEOGRAD &nbsp; • &nbsp; DOSTAVA NA ADRESU
       </div>
 
       <h1>
         Trša Pečenjara
       </h1>
 
+      <div class="linija"></div>
+
       <div class="podnaslov">
         Praseće i jagnjeće pečenje po porudžbini
       </div>
 
       <p class="hero-text">
-
         Sveže pečeno, pravo na vašu trpezu.
-
-        Praseće i jagnjeće pečenje pripremamo
-        po porudžbini za slave, proslave,
-        okupljanja i porodične ručkove.
-
+        Praseće i jagnjeće pečenje pripremamo po porudžbini
+        za slave, proslave, okupljanja i porodične ručkove.
         Vi naručite — mi donosimo na vašu adresu.
-
       </p>
 
-
       <div class="cena">
-        🔥 2.500 din/kg
+        2.500 din/kg
       </div>
-
 
       <div class="dugmad">
 
         <a
           class="dugme poziv"
           href="tel:+38163666038">
-
-          📞 Pozovi odmah
-
+          POZOVI ODMAH
         </a>
 
-
         <a
-          class="dugme whatsapp"
+          class="dugme poruka"
           href="https://wa.me/38163666038">
-
-          💬 WhatsApp
-
+          WHATSAPP
         </a>
 
-
         <a
-          class="dugme viber"
+          class="dugme poruka"
           href="viber://chat?number=%2B38163666038">
-
-          💜 Viber
-
+          VIBER
         </a>
 
       </div>
@@ -425,14 +417,17 @@
   </section>
 
 
-
-  <!-- PONUDA -->
-
   <section class="ponuda">
 
     <div class="naslov">
 
-      <h2>Naša ponuda</h2>
+      <div class="naslov-mali">
+        TRŠA PEČENJARA
+      </div>
+
+      <h2>
+        Naša ponuda
+      </h2>
 
       <p>
         Pečenje pripremljeno po vašoj porudžbini
@@ -443,78 +438,67 @@
 
     <div class="kartice">
 
-
       <div class="kartica">
 
-        <div class="ikonica">
-          🐷
-        </div>
+        <div class="kartica-linija"></div>
 
         <h3>
           Praseće pečenje
         </h3>
 
         <p>
-          Sveže pečeno prase,
-          pripremljeno po porudžbini
-          i spremno za vašu trpezu.
+          Sveže pečeno prase pripremljeno
+          po porudžbini i spremno za vašu trpezu.
         </p>
 
       </div>
 
 
-
       <div class="kartica">
 
-        <div class="ikonica">
-          🐑
-        </div>
+        <div class="kartica-linija"></div>
 
         <h3>
           Jagnjeće pečenje
         </h3>
 
         <p>
-          Jagnjeće pečenje za slave,
-          proslave, porodične ručkove
-          i posebne prilike.
+          Jagnjeće pečenje za slave, proslave,
+          porodične ručkove i posebne prilike.
         </p>
 
       </div>
-
 
 
       <div class="kartica">
 
-        <div class="ikonica">
-          🚚
-        </div>
+        <div class="kartica-linija"></div>
 
         <h3>
-          Dostava
+          Dostava na adresu
         </h3>
 
         <p>
-          Naručite telefonom ili porukom,
-          a pečenje donosimo na
-          dogovorenu adresu.
+          Poručite telefonom ili porukom,
+          a pečenje donosimo na dogovorenu
+          adresu u Beogradu.
         </p>
 
       </div>
-
 
     </div>
 
   </section>
 
 
-
-  <!-- CENA -->
-
   <section class="cena-sekcija">
 
+    <div class="mali">
+      CENA PEČENJA
+    </div>
+
     <h2>
-      Cena pečenja
+      Kvalitetno pečenje za vašu trpezu
     </h2>
 
     <div class="velika-cena">
@@ -522,40 +506,36 @@
     </div>
 
     <p>
-      Za dostupnost, količinu i termin
-      isporuke pozovite nas ili
-      pošaljite poruku.
+      Za dostupnost, željenu količinu i termin isporuke
+      pozovite nas ili pošaljite poruku.
     </p>
 
   </section>
 
-
-
-  <!-- DOSTAVA -->
 
   <section class="dostava">
 
     <h2>
-      🚚 Dostava na adresu
+      Dostava na vašu adresu
     </h2>
 
     <p>
-      Ne morate da dolazite po pečenje.
-      Dogovorite porudžbinu sa nama,
-      a mi ćemo pripremljeno pečenje
-      doneti na dogovorenu adresu u Beogradu.
+      Vi birate količinu i dogovarate termin,
+      a mi pripremamo pečenje i donosimo ga
+      na dogovorenu adresu u Beogradu.
     </p>
 
   </section>
 
 
-
-  <!-- KONTAKT -->
-
   <section class="kontakt">
 
+    <div class="kontakt-mali">
+      NARUČIVANJE
+    </div>
+
     <h2>
-      Poručite pečenje
+      Poručite svoje pečenje
     </h2>
 
     <p>
@@ -563,60 +543,43 @@
       putem WhatsApp-a ili Vibera.
     </p>
 
-
     <div class="telefon">
       063 666 038
     </div>
-
 
     <div class="dugmad">
 
       <a
         class="dugme poziv"
         href="tel:+38163666038">
-
-        📞 Pozovi
-
+        POZOVI
       </a>
 
-
       <a
-        class="dugme whatsapp"
+        class="dugme poruka"
         href="https://wa.me/38163666038">
-
-        💬 WhatsApp
-
+        WHATSAPP
       </a>
 
-
       <a
-        class="dugme viber"
+        class="dugme poruka"
         href="viber://chat?number=%2B38163666038">
-
-        💜 Viber
-
+        VIBER
       </a>
 
     </div>
 
-
     <div class="radno-vreme">
-
-      🕐 Narudžbine svakog dana
+      NARUDŽBINE SVAKOG DANA &nbsp; • &nbsp;
       <strong>08:00 – 20:00</strong>
-
     </div>
 
   </section>
 
 
-
   <footer>
-
-    © 2026 Trša Pečenjara • Beograd
-
+    © 2026 Trša Pečenjara &nbsp; • &nbsp; Beograd
   </footer>
-
 
 </body>
 </html>
